@@ -6,6 +6,8 @@ export const lowerCaseTests = [
   new StringToStringTest(["b"], "b"),
   new StringToStringTest(["aa"], "aa"),
   new StringToStringTest(["z"], "z"),
+  new StringToStringTest(["bbb"], "bbb"),
+  new StringToStringTest(["BBBB"], "bbbb"),
 ];
 export const reverseCaseTests = [
   new StringToStringTest(["aAa"], "AaA"),

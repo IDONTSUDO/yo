@@ -44,16 +44,16 @@ class Logger {
     this._returned(
       fun.name +
         `(${this._magnets(element.args)}):` +
-        this._blue(element.result)
+        this._blue(fun(element.args[0]))
     );
   }
   success(args: any) {
     console.log("\x1b[32m", "SUCCESS: " + args);
   }
-  _expected(args: any) {
+  _expected(...args: any) {
     console.log("\x1b[31m", "ERROR:[EXPECTED] " + args);
   }
-  _returned(args: any) {
+  _returned(...args: any) {
     console.log("\x1b[31m", "ERROR:[RETURNED] " + args);
   }
   _blue(s: any) {
